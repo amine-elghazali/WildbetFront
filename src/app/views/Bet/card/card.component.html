@@ -1,0 +1,51 @@
+<div class=" min-h-16 transform translate-y-4 hover:translate-y-8 hover:shadow-xl duration-500 ease-in-out betcard blockcursor-pointer text-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+
+  <div class="grid grid-cols-2 mt-2 gap-x-6 gap-y-6">
+
+    <div class="grid grid-rows-3 gap-y-6">
+
+      <span>
+        <span class="text-red-300 flex justify-center">
+          <img src={{HomeTeamImg}} width="70px" height="70px">
+        </span>
+        <span class="mt-2 font-extrabold">{{HomeTeam}}</span>
+      </span>
+
+      <span  class="font-extrabold">{{homescore}}</span>
+
+    </div>
+
+
+    <div class="grid grid-rows-3 gap-y-6">
+      <span>
+        <span class="text-red-300 flex justify-center">
+          <img src={{AwayTeamImg}} width="70px" height="70px">
+        </span>
+        <span  class="font-extrabold">{{AwayTeam}}</span>
+       </span>
+
+      <span  class="font-extrabold">{{awayscore}}</span>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="grid grid-cols-3">
+    <app-place-bet [teamName]='homescore_SC' [isLocal]="true" [contractAddress]="contractAddress" ></app-place-bet>
+      <app-place-bet [contractAddress]="contractAddress" [isDraw]="true" class="text-center font-extrabold text-white"></app-place-bet>
+    <app-place-bet [teamName]='awayscore_SC' [isLocal]="false" [contractAddress]="contractAddress"></app-place-bet>
+  </div>
+
+
+
+
+</div>
+
+
+
+

@@ -1,0 +1,4 @@
+<button class="btn btn-primary">
+  <button (click)="placeBet(teamName!)" class="text-green-600 text-center font-extrabold ">{{teamName}}</button>
+  <button *ngIf="isDraw" (click)="placeBet(teamName!)" class="text-green-600 text-center font-extrabold ">DRAW</button>
+</button>
